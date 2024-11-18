@@ -42,6 +42,9 @@ export default function TopNav() {
             href="/members" label="Matches"
           />
           <NavLink
+            href="/lists" label="Lists"
+          />
+          <NavLink
             href="/messages" label="Messages"
           />
 
