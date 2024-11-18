@@ -22,7 +22,7 @@ PostgreSQL database
 2. Install packages npm install
 3. Set up environment variables in .env file
 4. Set up Prisma database
-    npx prisma generate
-    npx prisma migrate dev
-    npx prisma db seed
+    * npx prisma generate
+    * npx prisma migrate dev
+    * npx prisma db seed
 5. Run the development server npm run dev
