@@ -8,13 +8,17 @@ import {
 from "@nextui-org/react";
 import React from "react";
 import { GiPadlock } from "react-icons/gi";
-
+import { useForm, SubmitHandler } from "react-hook-form";
 
 
 export default function LoginForm() {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
 
   return (
-    <Card className="w-3/5 mx-auto">
+    <Card className="w-2/5 mx-auto">
       <CardHeader className="flex flex-col items-center justify-center">
         <div className="flex flex-col gap-2 items-center text-default">
           <div className="flex flex-row items-center gap-3">
@@ -35,6 +39,7 @@ export default function LoginForm() {
               defaultValue=""
               label="Email"
               variant="bordered"
+              {...register("Email")}
 
             />
             <Input
@@ -42,6 +47,7 @@ export default function LoginForm() {
               label="Password"
               variant="bordered"
               type="password"
+              {...register("Password")}
             />
             <Button
               fullWidth
